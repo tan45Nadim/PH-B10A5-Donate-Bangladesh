@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DB Blog</title>
+    <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
+
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisyUI + tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/b7baa5765f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bgPrimary: "#F9F7F3",
+              bgSecondary: "rgba(17, 17, 17, 0.05)",
+              btnPrimary: "#B4F461",
+            },
+            fontFamily: {
+              lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lexend scroll-smooth">
+    <header class="sticky top-0 left-0 w-full z-50">
+      <div class="bg-bgPrimary pt-6 pb-9">
+        <div
+          class="container max-w-screen-xl mx-auto flex justify-between items-center px-4"
+        >
+          <button
+            class="btn bg-btnPrimary text-xl px-5 py-2 rounded-md border-none"
+          >
+            Home
+          </button>
+          <div class="flex justify-center items-center gap-3">
+            <img src="../assets/logo.png" alt="" />
+            <h1 class="hidden md:block text-2xl font-bold">
+              Donate Bangladesh
+            </h1>
+          </div>
+          <div class="flex justify-center items-center gap-2">
+            <img src="../assets/coin.png" alt="" />
+            <p class="text-xl">5500 BDT</p>
+          </div>
+        </div>
+      </div>
+      <!-- Donate & History button -->
+      <div class="flex justify-center gap-3 pt-10 md:pt-14 pb-8 md:pb-12">
+        <button class="btn bg-transparent text-xl px-5 py-2 rounded border">
+          Donation
+        </button>
+        <button class="btn bg-transparent text-xl px-5 py-2 rounded border">
+          History
+        </button>
+      </div>
+    </header>
+    <main class="pb-10 md:pb-16 container max-w-screen-xl mx-auto px-4">
+      <div class="pb-6 md:pb-8 flex items-center gap-4">
+        <h1 class="text-3xl md:text-4xl font-bold">Important FAQ</h1>
+        <i class="fa-2x fa-regular fa-circle-question"></i>
+      </div>
+      <div class="join join-vertical w-full">
+        <!-- Question-1 -->
+        <div
+          tabindex="0"
+          class="bg-transparent join-item collapse collapse-arrow border"
+        >
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <p class="text-base">
+              The Document Object Model (DOM) is a programming interface for web
+              documents. It represents the structure of a web page as a tree of
+              objects that can be manipulated with programming languages like
+              JavaScript. This allows dynamic changes to the content, structure,
+              and style of a web page.
+            </p>
+          </div>
+        </div>
+        <!-- Question-2 -->
+        <div
+          tabindex="0"
+          class="bg-transparent join-item collapse collapse-arrow border"
+        >
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p class="text-base">
+              You can select an element from the DOM using JavaScript methods
+              such as document.getElementById(), document.querySelector(), or
+              document.getElementsByClassName(). These methods allow you to
+              target specific elements by their ID, class, or CSS selectors.
+            </p>
+          </div>
+        </div>
+        <!-- Question-3 -->
+        <div
+          tabindex="0"
+          class="bg-transparent join-item collapse collapse-arrow border"
+        >
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p class="text-base">
+              Event delegation is a technique where a single event listener is
+              added to a parent element to manage events for all of its child
+              elements. Instead of adding individual event listeners to each
+              child element, the event is "delegated" to the parent. This is
+              useful because it improves performance and simplifies code,
+              especially when handling dynamically added elements.
+            </p>
+          </div>
+        </div>
+        <!-- Question-4 -->
+        <div
+          tabindex="0"
+          class="bg-transparent join-item collapse collapse-arrow border"
+        >
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p class="text-base">
+              You can manipulate an element's attributes and styles using
+              JavaScript. For attributes, you can use setAttribute(),
+              getAttribute(), and removeAttribute(). For styles, you can
+              directly modify the style property of an element, such as
+              element.style.backgroundColor = 'blue'; to change its background
+              color.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- <footer class="bg-bgPrimary py-14"></footer> -->
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DB History</title>
+    <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
+
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisyUI + tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/b7baa5765f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bgPrimary: "#F9F7F3",
+              bgSecondary: "rgba(17, 17, 17, 0.05)",
+              btnPrimary: "#B4F461",
+            },
+            fontFamily: {
+              lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lexend scroll-smooth">
+    <header class="sticky top-0 left-0 w-full z-50">
+      <div class="bg-bgPrimary pt-6 pb-9">
+        <div
+          class="container max-w-screen-xl mx-auto flex justify-between items-center px-4"
+        >
+          <button
+            class="btn bg-btnPrimary text-xl px-5 py-2 rounded-md border-none"
+          >
+            Blog
+          </button>
+          <div class="flex justify-center items-center gap-3">
+            <img src="../assets/logo.png" alt="" />
+            <h1 class="hidden md:block text-2xl font-bold">
+              Donate Bangladesh
+            </h1>
+          </div>
+          <div class="flex justify-center items-center gap-2">
+            <img src="./assets/coin.png" alt="" />
+            <p class="text-xl">5500 BDT</p>
+          </div>
+        </div>
+      </div>
+      <!-- Donate & History button -->
+      <div class="flex justify-center gap-3 pt-10 md:pt-14 pb-8 md:pb-12">
+        <button class="btn bg-transparent text-xl px-5 py-2 rounded border">
+          Donation
+        </button>
+        <button class="btn bg-transparent text-xl px-5 py-2 rounded border">
+          History
+        </button>
+      </div>
+    </header>
+    <main>
+      <h1>History</h1>
+    </main>
+    <footer class="bg-bgPrimary py-14"></footer>
+  </body>
+</html>
