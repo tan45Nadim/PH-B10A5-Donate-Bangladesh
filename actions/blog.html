@@ -43,13 +43,17 @@
       };
     </script>
   </head>
-  <body class="font-lexend scroll-smooth">
-    <header class="sticky top-0 left-0 w-full z-50">
-      <div class="bg-bgPrimary pt-6 pb-9">
+  <body class="font-lexend scroll-smooth min-h-screen flex flex-col">
+    <header
+      id="navbar"
+      class="backdrop-blur-lg sticky top-0 left-0 w-full z-50"
+    >
+      <div class="bg-bgPrimary pt-6 pb-9 mb-12 md:mb-20">
         <div
           class="container max-w-screen-xl mx-auto flex justify-between items-center px-4"
         >
           <button
+            onclick="goToIndex()"
             class="btn bg-btnPrimary text-xl px-5 py-2 rounded-md border-none"
           >
             Home
@@ -66,17 +70,10 @@
           </div>
         </div>
       </div>
-      <!-- Donate & History button -->
-      <div class="flex justify-center gap-3 pt-10 md:pt-14 pb-8 md:pb-12">
-        <button class="btn bg-transparent text-xl px-5 py-2 rounded border">
-          Donation
-        </button>
-        <button class="btn bg-transparent text-xl px-5 py-2 rounded border">
-          History
-        </button>
-      </div>
     </header>
-    <main class="pb-10 md:pb-16 container max-w-screen-xl mx-auto px-4">
+    <main
+      class="flex-grow pb-10 md:pb-16 container max-w-screen-xl mx-auto px-4"
+    >
       <div class="pb-6 md:pb-8 flex items-center gap-4">
         <h1 class="text-3xl md:text-4xl font-bold">Important FAQ</h1>
         <i class="fa-2x fa-regular fa-circle-question"></i>
@@ -159,6 +156,10 @@
         </div>
       </div>
     </main>
-    <!-- <footer class="bg-bgPrimary py-14"></footer> -->
+    <footer class="bg-bgPrimary py-14"></footer>
+
+    <!-- JS Connection -->
+    <script src="../js/features.js"></script>
+    <script src="../js/utilities.js"></script>
   </body>
 </html>
