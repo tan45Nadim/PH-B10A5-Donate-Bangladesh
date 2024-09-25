@@ -1,5 +1,5 @@
 function goToBlog() {
-    window.location.href = '../actions/blog.html'
+    window.location.href = './actions/blog.html'
 }
 
 function goToIndex() {
@@ -22,3 +22,12 @@ function changeButton(activeButton, inactiveButton) {
     document.getElementById(inactiveButton).classList.remove('bg-btnPrimary', 'border-none');
     document.getElementById(inactiveButton).classList.add('bg-transparent', 'border', 'border-black');
 }
+
+function getInputFieldById(id) {
+    return document.getElementById(id).value;
+}
+
+function getTextFieldById(id) {
+    return document.getElementById(id).innerText;
+}
+

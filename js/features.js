@@ -10,3 +10,95 @@ document.getElementById('btn-show-history').addEventListener('click', function()
     showSectionById('history-action');
     changeButton('btn-show-history', 'btn-show-donate');
 });
+
+
+// donate for Noakhali
+document.getElementById('btn-noakhali').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const donateNoakhali = getInputFieldById('donate-noakhali');
+    const amountNoakhali = getTextFieldById('amount-noakhali');
+    const myAmount = getTextFieldById('my-amount');
+
+    if (!isNaN(donateNoakhali) && donateNoakhali > 0) {
+        const newMyAmount = parseFloat(myAmount) - parseFloat(donateNoakhali);
+        const newAmountNoakhali = parseFloat(amountNoakhali) + parseFloat(donateNoakhali);
+
+        document.getElementById('my-amount').innerText = newMyAmount;
+        document.getElementById('amount-noakhali').innerText = newAmountNoakhali;
+
+        // add history
+        const div = document.createElement('div');
+        // div.classList.add('border-black', 'p-4');
+        div.innerHTML = `
+            <p>${donateNoakhali} Taka is Donated for Flood at Noakhali, Bangladesh</p>
+            <p>${new Date()}</p>
+            <hr class="border-black my-2">
+        `;
+
+        document.getElementById('history-container').appendChild(div);
+
+    } else {
+        return alert("Invalid Donation Amount!");
+    }
+});
+
+// donate for Feni
+document.getElementById('btn-feni').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const donateFeni = getInputFieldById('donate-feni');
+    const amountFeni = getTextFieldById('amount-feni');
+    const myAmount = getTextFieldById('my-amount');
+
+    if (!isNaN(donateFeni) && donateFeni > 0) {
+        const newMyAmount = parseFloat(myAmount) - parseFloat(donateFeni);
+        const newAmountFeni = parseFloat(amountFeni) + parseFloat(donateFeni);
+
+        document.getElementById('my-amount').innerText = newMyAmount;
+        document.getElementById('amount-feni').innerText = newAmountFeni;
+    } else {
+        return alert("Invalid Donation Amount!");
+    }
+
+    // add history
+    const div = document.createElement('div');
+    // div.classList.add('border-black', 'p-4');
+    div.innerHTML = `
+        <p>${donateFeni} Taka is Donated for Flood at Feni, Bangladesh</p>
+        <p>${new Date()}</p>
+        <hr class="border-black my-2">
+    `;
+
+    document.getElementById('history-container').appendChild(div);
+});
+
+// donate for Quota Movement
+document.getElementById('btn-quota').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const donateQuota = getInputFieldById('donate-quota');
+    const amountQuota = getTextFieldById('amount-quota');
+    const myAmount = getTextFieldById('my-amount');
+
+    if (!isNaN(donateQuota) && donateQuota > 0) {
+        const newMyAmount = parseFloat(myAmount) - parseFloat(donateQuota);
+        const newAmountQuota = parseFloat(amountQuota) + parseFloat(donateQuota);
+
+        document.getElementById('my-amount').innerText = newMyAmount;
+        document.getElementById('amount-quota').innerText = newAmountQuota;
+    } else {
+        return alert("Invalid Donation Amount!");
+    }
+
+    // add history
+    const div = document.createElement('div');
+    // div.classList.add('border-black', 'p-4');
+    div.innerHTML = `
+        <p>${donateQuota} Taka is Donated for Injured People in Quota Movement, Bangladesh</p>
+        <p>${new Date()}</p>
+        <hr class="border-black my-2">
+    `;
+
+    document.getElementById('history-container').appendChild(div);
+});
