@@ -30,4 +30,3 @@ function getInputFieldById(id) {
 function getTextFieldById(id) {
     return document.getElementById(id).innerText;
 }
-
