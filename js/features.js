@@ -28,6 +28,7 @@ document.getElementById('btn-noakhali').addEventListener('click', function(event
         document.getElementById('amount-noakhali').innerText = newAmountNoakhali;
        
         document.getElementById('my_modal_1').showModal();
+        document.getElementById('donate-noakhali').value = "";
 
         // add history
         const div = document.createElement('div');
@@ -58,6 +59,7 @@ document.getElementById('btn-feni').addEventListener('click', function(event) {
         document.getElementById('amount-feni').innerText = newAmountFeni;
 
         document.getElementById('my_modal_2').showModal();
+        document.getElementById('donate-feni').value = "";
 
         // add history
         const div = document.createElement('div');
@@ -88,6 +90,7 @@ document.getElementById('btn-quota').addEventListener('click', function(event) {
         document.getElementById('amount-quota').innerText = newAmountQuota;
 
         document.getElementById('my_modal_3').showModal();
+        document.getElementById('donate-quota').value = "";
 
         // add history
         const div = document.createElement('div');
